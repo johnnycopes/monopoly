@@ -11,8 +11,8 @@ body {
 }
 
 .board > div {
-	background: coral;
-	padding: 20px;
+	// background: coral;
+	// padding: 20px;
 }
 
 .go {
@@ -33,4 +33,39 @@ body {
 .go-to-jail {
 	grid-column: 11;
 	grid-row: 1 / 1;
+}
+
+.row {
+	display: grid;
+	grid-gap: 5px;
+}
+
+.horizontal-row {
+	grid-template-columns: repeat(9, 80px);
+	grid-template-rows: 125px;
+}
+
+.vertical-row {
+	grid-template-columns: 125px;
+	grid-template-rows: repeat(9, 80px);
+}
+
+.bottom-row {
+	grid-column: 2 / 11;
+	grid-row: 11;
+}
+
+.left-row {
+	grid-column: 1;
+	grid-row: 2 / 11;
+}
+
+.top-row {
+	grid-column: 2 / 11;
+	grid-row: 1;
+}
+
+.right-row {
+	grid-column: 11;
+	grid-row: 2 / 11;
 }
