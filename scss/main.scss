@@ -1,3 +1,8 @@
+@import "normalize";
+@import "typography";
+@import "variables";
+
+
 * {
 	box-sizing: border-box;
 }
@@ -17,8 +22,13 @@ body {
 
 .space {
 	background: rgb(248, 248, 242);
+	text-align: center;
 	// border: 3px solid black;
-	padding: 5px;
+}
+
+.property {
+	display: flex;
+	justify-content: space-between;
 }
 
 .go {
@@ -49,11 +59,23 @@ body {
 .horizontal-row {
 	grid-template-columns: repeat(9, 80px);
 	grid-template-rows: 125px;
+
+	.property {
+		flex-direction: column;
+	}
+
+	.color-bar {
+		height: 25px;
+	}
 }
 
 .vertical-row {
 	grid-template-columns: 125px;
 	grid-template-rows: repeat(9, 80px);
+
+	.color-bar {
+		width: 25px;
+	}
 }
 
 .bottom-row {
@@ -64,14 +86,32 @@ body {
 .left-row {
 	grid-column: 1;
 	grid-row: 2 / 11;
+
+	.property {
+		flex-direction: row-reverse;
+	}
 }
 
 .top-row {
 	grid-column: 2 / 11;
 	grid-row: 1;
+
+	.property {
+		flex-direction: column-reverse;
+	}
 }
 
 .right-row {
 	grid-column: 11;
 	grid-row: 2 / 11;
 }
+
+
+.dark-purple { background: $dark-purple; }
+.light-blue  { background: $light-blue; }
+.purple      { background: $purple; }
+.orange      { background: $orange; }
+.red         { background: $red; }
+.yellow      { background: $yellow; }
+.green       { background: $green; }
+.dark-blue   { background: $dark-blue; }
