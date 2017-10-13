@@ -26,11 +26,6 @@ body {
 	// border: 3px solid black;
 }
 
-.property {
-	display: flex;
-	justify-content: space-between;
-}
-
 .go {
 	grid-column: 11;
 	grid-row: 11 / 12;
@@ -49,6 +44,16 @@ body {
 .go-to-jail {
 	grid-column: 11;
 	grid-row: 1 / 1;
+}
+
+.property {
+	display: flex;
+	justify-content: space-between;
+
+	.name,
+	.price {
+		transform-origin: center;
+	}
 }
 
 .row {
@@ -90,6 +95,11 @@ body {
 	.property {
 		flex-direction: row-reverse;
 	}
+
+	.name,
+	.price {
+		transform: rotate(90deg);
+	}
 }
 
 .top-row {
@@ -99,11 +109,21 @@ body {
 	.property {
 		flex-direction: column-reverse;
 	}
+
+	.name,
+	.price {
+		transform: rotate(180deg);
+	}
 }
 
 .right-row {
 	grid-column: 11;
 	grid-row: 2 / 11;
+
+	.name,
+	.price {
+		transform: rotate(270deg);
+	}
 }
 
 

@@ -414,10 +414,6 @@ body {
   background: #f8f8f2;
   text-align: center; }
 
-.property {
-  display: flex;
-  justify-content: space-between; }
-
 .go {
   grid-column: 11;
   grid-row: 11 / 12; }
@@ -433,6 +429,13 @@ body {
 .go-to-jail {
   grid-column: 11;
   grid-row: 1 / 1; }
+
+.property {
+  display: flex;
+  justify-content: space-between; }
+  .property .name,
+  .property .price {
+    transform-origin: center; }
 
 .row {
   display: grid;
@@ -461,16 +464,25 @@ body {
   grid-row: 2 / 11; }
   .left-row .property {
     flex-direction: row-reverse; }
+  .left-row .name,
+  .left-row .price {
+    transform: rotate(90deg); }
 
 .top-row {
   grid-column: 2 / 11;
   grid-row: 1; }
   .top-row .property {
     flex-direction: column-reverse; }
+  .top-row .name,
+  .top-row .price {
+    transform: rotate(180deg); }
 
 .right-row {
   grid-column: 11;
   grid-row: 2 / 11; }
+  .right-row .name,
+  .right-row .price {
+    transform: rotate(270deg); }
 
 .dark-purple {
   background: #3d1097; }
