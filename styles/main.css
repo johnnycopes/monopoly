@@ -1,4 +1,15 @@
+body {
+  margin: 0; }
+
 .board {
-  max-width: 960px; }
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 125px repeat(9, 80px) 125px;
+  grid-template-rows: 125px repeat(9, 80px) 125px;
+  grid-gap: 5px; }
+
+.board > div {
+  background: coral;
+  padding: 20px; }
 
 /*# sourceMappingURL=main.css.map */
