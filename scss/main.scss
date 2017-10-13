@@ -17,28 +17,50 @@ body {
 	grid-template-columns: 125px repeat(9, 80px) 125px;
 	grid-template-rows: 125px repeat(9, 80px) 125px;
 	grid-gap: 5px;
-	// background: black;
 }
 
 .space {
 	background: rgb(248, 248, 242);
 	text-align: center;
-	// border: 3px solid black;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		transform: rotate(225deg);
+		text-align: center;
+		height: 100%;
+	}
 }
 
 .go {
 	grid-column: 11;
 	grid-row: 11 / 12;
+
+	.drawing,
+	.name {
+		transform: rotate(305deg);
+	}
 }
 
 .jail {
 	grid-column: 1;
 	grid-row: 11 / 12;
+
+	.drawing,
+	.name {
+		transform: rotate(45deg);
+	}
 }
 
 .free-parking {
 	grid-column: 1;
 	grid-row: 1 / 2;
+
+	.drawing,
+	.name {
+		transform: rotate(135deg);
+	}
 }
 
 .go-to-jail {
@@ -46,10 +68,11 @@ body {
 	grid-row: 1 / 1;
 }
 
-.property {
+.space {
 	display: flex;
 	justify-content: space-between;
 
+	.drawing,
 	.name,
 	.price {
 		transform-origin: center;
@@ -65,7 +88,7 @@ body {
 	grid-template-columns: repeat(9, 80px);
 	grid-template-rows: 125px;
 
-	.property {
+	.space {
 		flex-direction: column;
 	}
 
@@ -92,10 +115,11 @@ body {
 	grid-column: 1;
 	grid-row: 2 / 11;
 
-	.property {
+	.space {
 		flex-direction: row-reverse;
 	}
 
+	.drawing,
 	.name,
 	.price {
 		transform: rotate(90deg);
@@ -106,10 +130,11 @@ body {
 	grid-column: 2 / 11;
 	grid-row: 1;
 
-	.property {
+	.space {
 		flex-direction: column-reverse;
 	}
 
+	.drawing,
 	.name,
 	.price {
 		transform: rotate(180deg);
@@ -120,7 +145,8 @@ body {
 	grid-column: 11;
 	grid-row: 2 / 11;
 
-	.name,
+	.drawing,
+	.name,	
 	.price {
 		transform: rotate(270deg);
 	}

@@ -413,28 +413,45 @@ body {
 .space {
   background: #f8f8f2;
   text-align: center; }
+  .space .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: rotate(225deg);
+    text-align: center;
+    height: 100%; }
 
 .go {
   grid-column: 11;
   grid-row: 11 / 12; }
+  .go .drawing,
+  .go .name {
+    transform: rotate(305deg); }
 
 .jail {
   grid-column: 1;
   grid-row: 11 / 12; }
+  .jail .drawing,
+  .jail .name {
+    transform: rotate(45deg); }
 
 .free-parking {
   grid-column: 1;
   grid-row: 1 / 2; }
+  .free-parking .drawing,
+  .free-parking .name {
+    transform: rotate(135deg); }
 
 .go-to-jail {
   grid-column: 11;
   grid-row: 1 / 1; }
 
-.property {
+.space {
   display: flex;
   justify-content: space-between; }
-  .property .name,
-  .property .price {
+  .space .drawing,
+  .space .name,
+  .space .price {
     transform-origin: center; }
 
 .row {
@@ -444,7 +461,7 @@ body {
 .horizontal-row {
   grid-template-columns: repeat(9, 80px);
   grid-template-rows: 125px; }
-  .horizontal-row .property {
+  .horizontal-row .space {
     flex-direction: column; }
   .horizontal-row .color-bar {
     height: 25px; }
@@ -462,8 +479,9 @@ body {
 .left-row {
   grid-column: 1;
   grid-row: 2 / 11; }
-  .left-row .property {
+  .left-row .space {
     flex-direction: row-reverse; }
+  .left-row .drawing,
   .left-row .name,
   .left-row .price {
     transform: rotate(90deg); }
@@ -471,8 +489,9 @@ body {
 .top-row {
   grid-column: 2 / 11;
   grid-row: 1; }
-  .top-row .property {
+  .top-row .space {
     flex-direction: column-reverse; }
+  .top-row .drawing,
   .top-row .name,
   .top-row .price {
     transform: rotate(180deg); }
@@ -480,6 +499,7 @@ body {
 .right-row {
   grid-column: 11;
   grid-row: 2 / 11; }
+  .right-row .drawing,
   .right-row .name,
   .right-row .price {
     transform: rotate(270deg); }
