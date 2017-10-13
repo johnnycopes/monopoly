@@ -19,6 +19,14 @@ body {
 	grid-gap: 5px;
 }
 
+.title {
+	grid-column: 3 / 10;
+	grid-row: 6;
+	text-align: center;
+	font-size: 72px;
+	transform: rotate(-45deg);
+}
+
 .space {
 	background: rgb(248, 248, 242);
 	text-align: center;

@@ -410,6 +410,13 @@ body {
   grid-template-rows: 125px repeat(9, 80px) 125px;
   grid-gap: 5px; }
 
+.title {
+  grid-column: 3 / 10;
+  grid-row: 6;
+  text-align: center;
+  font-size: 72px;
+  transform: rotate(-45deg); }
+
 .space {
   background: #f8f8f2;
   text-align: center; }
@@ -492,13 +499,13 @@ body {
     transform: translate(-50%, -50%) rotate(270deg); }
 
 .dark-purple {
-  background: #3d1097; }
+  background: #4d0875; }
 
 .light-blue {
   background: #77ccf3; }
 
 .purple {
-  background: #8436a8; }
+  background: #9752b8; }
 
 .orange {
   background: #fa811d; }
@@ -510,9 +517,9 @@ body {
   background: #f1e204; }
 
 .green {
-  background: #117a22; }
+  background: #41994e; }
 
 .dark-blue {
-  background: #203aac; }
+  background: #495dad; }
 
 /*# sourceMappingURL=main.css.map */
