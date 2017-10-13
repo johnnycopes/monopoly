@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 }
@@ -8,11 +12,13 @@ body {
 	grid-template-columns: 125px repeat(9, 80px) 125px;
 	grid-template-rows: 125px repeat(9, 80px) 125px;
 	grid-gap: 5px;
+	// background: black;
 }
 
-.board > div {
-	// background: coral;
-	// padding: 20px;
+.space {
+	background: rgb(248, 248, 242);
+	// border: 3px solid black;
+	padding: 5px;
 }
 
 .go {

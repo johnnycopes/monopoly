@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0; }
 
@@ -7,6 +10,10 @@ body {
   grid-template-columns: 125px repeat(9, 80px) 125px;
   grid-template-rows: 125px repeat(9, 80px) 125px;
   grid-gap: 5px; }
+
+.space {
+  background: #f8f8f2;
+  padding: 5px; }
 
 .go {
   grid-column: 11;
