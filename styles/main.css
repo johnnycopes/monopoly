@@ -12,4 +12,20 @@ body {
   background: coral;
   padding: 20px; }
 
+.go {
+  grid-column: 11;
+  grid-row: 11 / 12; }
+
+.jail {
+  grid-column: 1;
+  grid-row: 11 / 12; }
+
+.free-parking {
+  grid-column: 1;
+  grid-row: 1 / 2; }
+
+.go-to-jail {
+  grid-column: 11;
+  grid-row: 1 / 1; }
+
 /*# sourceMappingURL=main.css.map */
