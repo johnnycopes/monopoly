@@ -415,44 +415,39 @@ body {
   text-align: center; }
   .space .container {
     display: flex;
+    transform-origin: center;
+    justify-content: space-between;
     flex-direction: column;
-    justify-content: space-around;
-    transform: rotate(225deg);
-    text-align: center;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
+
+.corner .container {
+  justify-content: space-around;
+  flex-direction: column; }
 
 .go {
   grid-column: 11;
   grid-row: 11 / 12; }
-  .go .drawing,
-  .go .name {
+  .go .container {
     transform: rotate(305deg); }
 
 .jail {
   grid-column: 1;
   grid-row: 11 / 12; }
-  .jail .drawing,
-  .jail .name {
+  .jail .container {
     transform: rotate(45deg); }
 
 .free-parking {
   grid-column: 1;
   grid-row: 1 / 2; }
-  .free-parking .drawing,
-  .free-parking .name {
+  .free-parking .container {
     transform: rotate(135deg); }
 
 .go-to-jail {
   grid-column: 11;
   grid-row: 1 / 1; }
-
-.space {
-  display: flex;
-  justify-content: space-between; }
-  .space .drawing,
-  .space .name,
-  .space .price {
-    transform-origin: center; }
+  .go-to-jail .container {
+    transform: rotate(225deg); }
 
 .row {
   display: grid;
@@ -461,8 +456,6 @@ body {
 .horizontal-row {
   grid-template-columns: repeat(9, 80px);
   grid-template-rows: 125px; }
-  .horizontal-row .space {
-    flex-direction: column; }
   .horizontal-row .color-bar {
     height: 25px; }
 
@@ -470,7 +463,7 @@ body {
   grid-template-columns: 125px;
   grid-template-rows: repeat(9, 80px); }
   .vertical-row .color-bar {
-    width: 25px; }
+    height: 25px; }
 
 .bottom-row {
   grid-column: 2 / 11;
@@ -479,21 +472,13 @@ body {
 .left-row {
   grid-column: 1;
   grid-row: 2 / 11; }
-  .left-row .space {
-    flex-direction: row-reverse; }
-  .left-row .drawing,
-  .left-row .name,
-  .left-row .price {
+  .left-row .container {
     transform: rotate(90deg); }
 
 .top-row {
   grid-column: 2 / 11;
   grid-row: 1; }
-  .top-row .space {
-    flex-direction: column-reverse; }
-  .top-row .drawing,
-  .top-row .name,
-  .top-row .price {
+  .top-row .container {
     transform: rotate(180deg); }
 
 .right-row {
