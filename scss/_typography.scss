@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
 @import 'variables';
 
 body {
   font-family: $body-font;
+  font-weight: 400;
+  font-size: 10px;
   color: $black;
-  // text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4, h5, h6 {
