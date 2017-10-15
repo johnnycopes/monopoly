@@ -2,6 +2,9 @@
 @import "typography";
 @import "variables";
 
+// =================
+// GLOBAL
+// =================
 
 * {
 	box-sizing: border-box;
@@ -10,6 +13,25 @@
 body {
 	margin: 0;
 }
+
+
+// Property colors
+
+.dark-purple { background: $dark-purple; }
+.light-blue  { background: $light-blue; }
+.purple      { background: $purple; }
+.orange      { background: $orange; }
+.red         { background: $red; }
+.yellow      { background: $yellow; }
+.green       { background: $green; }
+.dark-blue   { background: $dark-blue; }
+
+
+// =================
+// LAYOUT
+// =================
+
+// Grids
 
 .board {
 	display: grid;
@@ -23,6 +45,7 @@ body {
 
 .center {
 	display: grid;
+	align-items: center;
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: repeat(7, 1fr);
 	background: $board;
@@ -38,6 +61,68 @@ body {
 		font-weight: 400;
 	}
 }
+
+
+// Rows of spaces
+
+.row {
+	display: grid;
+	grid-gap: 2px;
+}
+
+.horizontal-row {
+	grid-template-columns: repeat(9, 80px);
+	grid-template-rows: 125px;
+}
+
+.vertical-row {
+	grid-template-columns: 125px;
+	grid-template-rows: repeat(9, 80px);
+
+	.container {
+		top: 50%;
+		left: 50%;
+	}
+}
+
+.bottom-row {
+	grid-column: 2 / 11;
+	grid-row: 11;
+}
+
+.left-row {
+	grid-column: 1;
+	grid-row: 2 / 11;
+
+	.container {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+.top-row {
+	grid-column: 2 / 11;
+	grid-row: 1;
+
+	.container {
+		transform: rotate(180deg);
+	}
+}
+
+.right-row {
+	grid-column: 11;
+	grid-row: 2 / 11;
+
+	.container {
+		transform: translate(-50%, -50%) rotate(270deg);
+	}
+}
+
+
+// =================
+// SPACES
+// =================
+
+// Types of spaces
 
 .space {
 	background: $board;
@@ -58,14 +143,22 @@ body {
 		border-bottom: 2px solid $black;
 	}
 
-	.name {
-		padding: 0 15px 40px;
+	.name,
+	.instructions {
+		padding: 0 15px;
 	}
 
 	.price {
 		font-size: 7px;
 		font-weight: 400;
 		padding-bottom: 10px;
+	}
+}
+
+.property {
+
+	.name {
+		padding-bottom: 40px;
 	}
 }
 
@@ -76,7 +169,14 @@ body {
 		height: 100%;
 		width: 100%;
 	}
+
+	.name {
+		padding: 0;
+	}
 }
+
+
+// Specific spaces
 
 .go {
 	grid-column: 11;
@@ -114,70 +214,30 @@ body {
 	}
 }
 
-
-
-.row {
-	display: grid;
-	grid-gap: 2px;
-}
-
-.horizontal-row {
-	grid-template-columns: repeat(9, 80px);
-	grid-template-rows: 125px;
-}
-
-.vertical-row {
-	grid-template-columns: 125px;
-	grid-template-rows: repeat(9, 80px);
+.chance {
 
 	.container {
-		top: 50%;
-		left: 50%;
+		justify-content: center;
+	}
+
+	.drawing {
+		font-size: 90px;
+		color: $red;
+	}
+
+	.blue {
+		color: $dark-blue;
 	}
 }
 
-
-
-.bottom-row {
-	grid-column: 2 / 11;
-	grid-row: 11;
-}
-
-.left-row {
-	grid-column: 1;
-	grid-row: 2 / 11;
-
+.community-chest {
+	
 	.container {
-		transform: translate(-50%, -50%) rotate(90deg);
+		justify-content: space-around;
+	}
+
+	.drawing {
+		font-size: 50px;
+		color: $light-blue;
 	}
 }
-
-.top-row {
-	grid-column: 2 / 11;
-	grid-row: 1;
-
-	.container {
-		transform: rotate(180deg);
-	}
-}
-
-.right-row {
-	grid-column: 11;
-	grid-row: 2 / 11;
-
-	.container {
-		transform: translate(-50%, -50%) rotate(270deg);
-	}
-}
-
-
-
-
-.dark-purple { background: $dark-purple; }
-.light-blue  { background: $light-blue; }
-.purple      { background: $purple; }
-.orange      { background: $orange; }
-.red         { background: $red; }
-.yellow      { background: $yellow; }
-.green       { background: $green; }
-.dark-blue   { background: $dark-blue; }
