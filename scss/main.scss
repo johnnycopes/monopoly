@@ -151,14 +151,14 @@ body {
 	.price {
 		font-size: 7px;
 		font-weight: 400;
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 	}
 }
 
 .property {
 
 	.name {
-		padding-bottom: 40px;
+		padding-bottom: 50px;
 	}
 }
 
@@ -172,6 +172,29 @@ body {
 
 	.name {
 		padding: 0;
+	}
+}
+
+.railroad {
+
+	.name {
+		padding-top: 10px;
+	}
+
+	.drawing {
+		font-size: 60px;
+		color: $black;
+	}
+}
+
+.utility {
+	
+	.name {
+		padding-top: 10px;
+	}
+
+	.drawing {
+		font-size: 70px;
 	}
 }
 
@@ -239,5 +262,23 @@ body {
 	.drawing {
 		font-size: 50px;
 		color: $light-blue;
+	}
+
+	.instructions {
+		font-size: 8px;
+	}
+}
+
+.electric-company {
+	
+	.drawing {
+		color: $yellow;
+	}
+}
+
+.waterworks {
+
+	.drawing {
+		color: $dark-blue;
 	}
 }

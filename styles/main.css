@@ -407,13 +407,13 @@ body {
   margin: 0; }
 
 .dark-purple {
-  background: #4d0875; }
+  background: #5e3577; }
 
 .light-blue {
-  background: #77ccf3; }
+  background: #aedcf0; }
 
 .purple {
-  background: #9752b8; }
+  background: #b02f7c; }
 
 .orange {
   background: #fa811d; }
@@ -428,7 +428,7 @@ body {
   background: #41994e; }
 
 .dark-blue {
-  background: #495dad; }
+  background: #5a6dba; }
 
 .board {
   display: grid;
@@ -444,7 +444,7 @@ body {
   align-items: center;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  background: #f8f8f2;
+  background: #fafaf8;
   grid-column: 2 / 11;
   grid-row: 2 / 11; }
   .center .title {
@@ -493,7 +493,7 @@ body {
     transform: translate(-50%, -50%) rotate(270deg); }
 
 .space {
-  background: #f8f8f2;
+  background: #fafaf8;
   text-align: center; }
   .space .container {
     display: flex;
@@ -512,10 +512,10 @@ body {
   .space .price {
     font-size: 7px;
     font-weight: 400;
-    padding-bottom: 10px; }
+    padding-bottom: 5px; }
 
 .property .name {
-  padding-bottom: 40px; }
+  padding-bottom: 50px; }
 
 .corner .container {
   justify-content: space-around;
@@ -523,6 +523,17 @@ body {
   width: 100%; }
 .corner .name {
   padding: 0; }
+
+.railroad .name {
+  padding-top: 10px; }
+.railroad .drawing {
+  font-size: 60px;
+  color: #080808; }
+
+.utility .name {
+  padding-top: 10px; }
+.utility .drawing {
+  font-size: 70px; }
 
 .go {
   grid-column: 11;
@@ -554,12 +565,20 @@ body {
   font-size: 90px;
   color: #c20e26; }
 .chance .blue {
-  color: #495dad; }
+  color: #5a6dba; }
 
 .community-chest .container {
   justify-content: space-around; }
 .community-chest .drawing {
   font-size: 50px;
-  color: #77ccf3; }
+  color: #aedcf0; }
+.community-chest .instructions {
+  font-size: 8px; }
+
+.electric-company .drawing {
+  color: #f1e204; }
+
+.waterworks .drawing {
+  color: #5a6dba; }
 
 /*# sourceMappingURL=main.css.map */
