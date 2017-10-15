@@ -282,3 +282,49 @@ body {
 		color: $dark-blue;
 	}
 }
+
+.fee {
+	.name {
+		padding-top: 10px;
+		font-size: 14px;
+	}
+
+	.instructions {
+		font-size: 10px;
+	}
+}
+
+.luxury-tax {
+	
+	.drawing {
+		font-size: 50px;
+	}
+
+	.instructions {
+		padding-bottom: 5px;
+	}
+}
+
+.income-tax {
+	
+	.container {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.name {
+		padding-bottom: 5px;
+	}
+
+	.diamond {
+		width: 5px;
+		height: 5px;
+		background: $black;
+		transform: rotate(45deg);
+		display: inline-block
+	}
+
+	.instructions {
+		padding: 5px 0;
+	}
+}

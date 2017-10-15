@@ -419,7 +419,7 @@ body {
   background: #fa811d; }
 
 .red {
-  background: #c20e26; }
+  background: #f50c2b; }
 
 .yellow {
   background: #f1e204; }
@@ -563,7 +563,7 @@ body {
   justify-content: center; }
 .chance .drawing {
   font-size: 90px;
-  color: #c20e26; }
+  color: #f50c2b; }
 .chance .blue {
   color: #5a6dba; }
 
@@ -580,5 +580,30 @@ body {
 
 .waterworks .drawing {
   color: #5a6dba; }
+
+.fee .name {
+  padding-top: 10px;
+  font-size: 14px; }
+.fee .instructions {
+  font-size: 10px; }
+
+.luxury-tax .drawing {
+  font-size: 50px; }
+.luxury-tax .instructions {
+  padding-bottom: 5px; }
+
+.income-tax .container {
+  justify-content: center;
+  align-items: center; }
+.income-tax .name {
+  padding-bottom: 5px; }
+.income-tax .diamond {
+  width: 5px;
+  height: 5px;
+  background: #080808;
+  transform: rotate(45deg);
+  display: inline-block; }
+.income-tax .instructions {
+  padding: 5px 0; }
 
 /*# sourceMappingURL=main.css.map */
