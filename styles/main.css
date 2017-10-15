@@ -564,7 +564,14 @@ body {
   grid-column: 11;
   grid-row: 1 / 1; }
   .go-to-jail .container {
+    justify-content: center;
     transform: rotate(225deg); }
+  .go-to-jail .name {
+    font-size: 16px; }
+  .go-to-jail .drawing {
+    padding: 5px 0;
+    font-size: 60px;
+    color: #640303; }
 
 .chance .container {
   justify-content: center; }
