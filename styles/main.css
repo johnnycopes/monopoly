@@ -551,7 +551,14 @@ body {
   grid-column: 1;
   grid-row: 1 / 2; }
   .free-parking .container {
+    justify-content: center;
     transform: rotate(135deg); }
+  .free-parking .name {
+    font-size: 16px; }
+  .free-parking .drawing {
+    padding: 5px 0;
+    font-size: 60px;
+    color: #f50c2b; }
 
 .go-to-jail {
   grid-column: 11;

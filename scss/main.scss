@@ -224,7 +224,18 @@ body {
 	grid-row: 1 / 2;
 
 	.container {
+		justify-content: center;
 		transform: rotate(135deg);
+	}
+
+	.name {
+		font-size: 16px;
+	}
+
+	.drawing {
+		padding: 5px 0;
+		font-size: 60px;
+		color: $red;
 	}
 }
 
