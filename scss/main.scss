@@ -56,7 +56,7 @@ body {
 	.title {
 		grid-column: 1 / 9;
 		grid-row: 4;
-		font-size: 72px;
+		font-size: 90px;
 		letter-spacing: 12px;
 		font-weight: 400;
 	}
@@ -65,26 +65,29 @@ body {
 		grid-column: 2 / 4;
 		grid-row: 2 / 4;
 		transform: rotate(135deg);
-		margin-top: 10px;
+		margin-bottom: 60px;
+		margin-right: 60px;
 	}
 
 	.chance-deck {
 		grid-column: 5 / 7;
 		grid-row: 5 / 7;
 		transform: rotate(-45deg);
-		margin-top: 10px;
+		margin-top: 60px;
+		margin-left: 60px;
 	}
 
 	.label {
 		text-align: center;
-		font-weight: 400;
+		font-weight: 500;
 		padding-bottom: 10px;
+		letter-spacing: 3px;
 	}
 
 	.deck {
 		border: 2px dashed $black;
-		width: 170px;
-		height: 140px;
+		width: 160px;
+		height: 120px;
 	}
 }
 
