@@ -31,7 +31,7 @@ body {
 // LAYOUT
 // =================
 
-// Grids
+// Board
 
 .board {
 	display: grid;
@@ -44,51 +44,51 @@ body {
 }
 
 .center {
-	display: grid;
-	align-items: center;
-	justify-items: center;
-	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(7, 1fr);
-	background: $board;
 	grid-column: 2 / 11;
 	grid-row: 2 / 11;
+	background: $board;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	justify-items: center;
+	align-items: center;
+}
 
-	.title {
-		grid-column: 1 / 9;
-		grid-row: 4;
-		font-size: 90px;
-		letter-spacing: 12px;
-		font-weight: 400;
-	}
+.title {
+	grid-column: 1 / 9;
+	grid-row: 4;
+	font-size: 90px;
+	font-weight: 400;
+	letter-spacing: 12px;
+}
 
-	.community-chest-deck {
-		grid-column: 2 / 4;
-		grid-row: 2 / 4;
-		transform: rotate(135deg);
-		margin-bottom: 60px;
-		margin-right: 60px;
-	}
+.community-chest-deck {
+	grid-column: 2 / 4;
+	grid-row: 2 / 4;
+	transform: rotate(135deg);
+	margin-bottom: 60px;
+	margin-right: 60px;
+}
 
-	.chance-deck {
-		grid-column: 5 / 7;
-		grid-row: 5 / 7;
-		transform: rotate(-45deg);
-		margin-top: 60px;
-		margin-left: 60px;
-	}
+.chance-deck {
+	grid-column: 5 / 7;
+	grid-row: 5 / 7;
+	transform: rotate(315deg);
+	margin-top: 60px;
+	margin-left: 60px;
+}
 
-	.label {
-		text-align: center;
-		font-weight: 500;
-		padding-bottom: 10px;
-		letter-spacing: 3px;
-	}
+.label {
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 3px;
+	padding-bottom: 10px;
+}
 
-	.deck {
-		border: 2px dashed $black;
-		width: 160px;
-		height: 120px;
-	}
+.deck {
+	border: 2px dashed $black;
+	width: 160px;
+	height: 120px;
 }
 
 
@@ -159,35 +159,24 @@ body {
 
 	.container {
 		display: flex;
-		position: relative;
-		transform-origin: center;
 		flex-direction: column;
 		justify-content: space-between;
+		position: relative;
+		transform-origin: center;
 		height: 125px;
 		width: 80px;
 	}
 
-	.color-bar {
-		height: 25px;
-		border-bottom: 2px solid $black;
-	}
-
 	.name,
 	.instructions {
-		padding: 0 15px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 	.price {
 		font-size: 7px;
 		font-weight: 400;
 		padding-bottom: 5px;
-	}
-}
-
-.property {
-
-	.name {
-		padding-bottom: 50px;
 	}
 }
 
@@ -204,6 +193,18 @@ body {
 	}
 }
 
+.property {
+
+	.color-bar {
+		height: 25px;
+		border-bottom: 2px solid $black;
+	}
+
+	.name {
+		padding-bottom: 50px;
+	}
+}
+
 .railroad {
 
 	.name {
@@ -216,17 +217,6 @@ body {
 	}
 }
 
-.fee {
-	.name {
-		padding-top: 10px;
-		font-size: 14px;
-	}
-
-	.instructions {
-		font-size: 10px;
-	}
-}
-
 .utility {
 	
 	.name {
@@ -235,6 +225,17 @@ body {
 
 	.drawing {
 		font-size: 70px;
+	}
+}
+
+.fee {
+	.name {
+		padding-top: 10px;
+		font-size: 14px;
+	}
+
+	.instructions {
+		font-size: 10px;
 	}
 }
 
@@ -273,17 +274,17 @@ body {
 	grid-column: 1;
 	grid-row: 11 / 12;
 	display: grid;
-	align-items: center;
-	justify-content: center;
 	grid-template-columns: repeat(10, 12.5px);
 	grid-template-rows: repeat(10, 12.5px);
+	justify-content: center;
+	align-items: center;
 
 	.drawing {
 		grid-column: 4 / 11;
 		grid-row: 1 / 8;
-		background: $orange;
 		width: 87.5px;
 		height: 87.5px;
+		background: $orange;
 		border-bottom: 2px solid $black;
 		border-left: 2px solid $black;
 	}
@@ -302,27 +303,27 @@ body {
 	}
 
 	.container {
-		transform: rotate(45deg);
 		align-items: center;
+		transform: rotate(45deg);
 	}
 
 	.window {
-		background: $board;
-		border: 2px solid $black;
+		display: flex;
+		justify-content: space-around;
+    align-items: center;
+		position: relative;
 		width: 55px;
 		height: 55px;
-		display: flex;
-    align-items: center;
-		justify-content: space-around;
-		position: relative;
+		background: $board;
+		border: 2px solid $black;
 	}
 
 	.person {
-		font-size: 40px;
 		position: absolute;
+		transform: translate(-50%, -50%);
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		font-size: 40px;
 	}
 
 	.bar {
@@ -346,9 +347,10 @@ body {
 	}
 
 	.drawing {
-		padding: 5px 0;
 		font-size: 60px;
 		color: $red;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -366,9 +368,10 @@ body {
 	}
 
 	.drawing {
-		padding: 5px 0;
 		font-size: 60px;
 		color: $brown;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -418,17 +421,6 @@ body {
 	}
 }
 
-.luxury-tax {
-	
-	.drawing {
-		font-size: 50px;
-	}
-
-	.instructions {
-		padding-bottom: 5px;
-	}
-}
-
 .income-tax {
 	
 	.container {
@@ -449,6 +441,33 @@ body {
 	}
 
 	.instructions {
-		padding: 5px 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
+}
+
+.luxury-tax {
+	
+	.drawing {
+		font-size: 50px;
+	}
+
+	.instructions {
+		padding-bottom: 5px;
+	}
+}
+
+
+// =================
+// UTILITY
+// =================
+
+.long-name {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.three-line-name {
+	position: relative;
+	top: 5px;
 }
