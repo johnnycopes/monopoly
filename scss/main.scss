@@ -13,6 +13,7 @@
 body {
 	margin: 0;
 	background-image: url("https://i.pinimg.com/originals/a4/73/cd/a473cda6c0a58d9b2e2bc2292d16c334.jpg");
+	background-position: center;
 	background-repeat: repeat;
 	background-size: 100px;
 }
@@ -306,6 +307,10 @@ body {
 	.container {
 		align-items: center;
 		transform: rotate(45deg);
+	}
+
+	.name {
+		font-size: 14px;
 	}
 
 	.window {
