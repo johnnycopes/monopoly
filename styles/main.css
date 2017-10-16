@@ -439,7 +439,7 @@ body {
   grid-template-columns: 125px repeat(9, 80px) 125px;
   grid-template-rows: 125px repeat(9, 80px) 125px;
   grid-gap: 2px;
-  margin: 20px auto;
+  margin: 50px auto;
   width: 994px;
   height: 994px;
   background: #080808;
