@@ -442,18 +442,36 @@ body {
 .center {
   display: grid;
   align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
   background: #fafaf8;
   grid-column: 2 / 11;
   grid-row: 2 / 11; }
   .center .title {
-    grid-column: 2 / 7;
+    grid-column: 1 / 9;
     grid-row: 4;
-    text-align: center;
     font-size: 72px;
     letter-spacing: 12px;
     font-weight: 400; }
+  .center .community-chest-deck {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    transform: rotate(135deg);
+    margin-top: 10px; }
+  .center .chance-deck {
+    grid-column: 5 / 7;
+    grid-row: 5 / 7;
+    transform: rotate(-45deg);
+    margin-top: 10px; }
+  .center .label {
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 10px; }
+  .center .deck {
+    border: 2px dashed #080808;
+    width: 170px;
+    height: 140px; }
 
 .row {
   display: grid;
@@ -530,6 +548,12 @@ body {
   font-size: 60px;
   color: #080808; }
 
+.fee .name {
+  padding-top: 10px;
+  font-size: 14px; }
+.fee .instructions {
+  font-size: 10px; }
+
 .utility .name {
   padding-top: 10px; }
 .utility .drawing {
@@ -537,15 +561,70 @@ body {
 
 .go {
   grid-column: 11;
-  grid-row: 11 / 12; }
+  grid-row: 11 / 12;
+  position: relative; }
   .go .container {
-    transform: rotate(305deg); }
+    justify-content: flex-start;
+    transform: rotate(315deg); }
+  .go .instructions {
+    padding: 0 30px; }
+  .go .go-word {
+    font-size: 60px;
+    color: #f50c2b; }
+  .go .arrow {
+    font-size: 45px;
+    color: #f50c2b;
+    position: absolute;
+    bottom: -10px;
+    left: 5px; }
 
 .jail {
   grid-column: 1;
-  grid-row: 11 / 12; }
+  grid-row: 11 / 12;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(10, 12.5px);
+  grid-template-rows: repeat(10, 12.5px); }
+  .jail .drawing {
+    grid-column: 4 / 11;
+    grid-row: 1 / 8;
+    background: #fa811d;
+    width: 87.5px;
+    height: 87.5px;
+    border-bottom: 2px solid #080808;
+    border-left: 2px solid #080808; }
+  .jail .just {
+    grid-column: 3;
+    grid-row: 4;
+    transform: rotate(90deg);
+    padding-top: 5px; }
+  .jail .visiting {
+    grid-column: 6;
+    grid-row: 8;
+    padding-top: 5px; }
   .jail .container {
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    align-items: center; }
+  .jail .window {
+    background: #fafaf8;
+    border: 2px solid #080808;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative; }
+  .jail .person {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .jail .bar {
+    height: 55px;
+    width: 2px;
+    background: #080808; }
 
 .free-parking {
   grid-column: 1;
@@ -594,12 +673,6 @@ body {
 
 .waterworks .drawing {
   color: #5a6dba; }
-
-.fee .name {
-  padding-top: 10px;
-  font-size: 14px; }
-.fee .instructions {
-  font-size: 10px; }
 
 .luxury-tax .drawing {
   font-size: 50px; }
